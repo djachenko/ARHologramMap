@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="ARHologram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GRG-kI-SmY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9QV-Rh-bBR">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </arscnView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QgL-vd-v57">
+                                <rect key="frame" x="276" y="586" width="51" height="31"/>
+                                <connections>
+                                    <action selector="collapseHandlerWithSwitchState:" destination="BV1-FR-VrT" eventType="valueChanged" id="N00-jr-H1X"/>
+                                </connections>
+                            </switch>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="3.5" translatesAutoresizingMaskIntoConstraints="NO" id="pbn-L6-ZN9">
+                                <rect key="frame" x="203" y="318.5" width="304" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="F3E-U9-QSJ"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="floorChangeHandlerWithSlider:" destination="BV1-FR-VrT" eventType="valueChanged" id="ADk-Qq-5cu"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="Eix-Nm-wiF" firstAttribute="trailing" secondItem="QgL-vd-v57" secondAttribute="trailing" constant="50" id="EPv-tc-gw8"/>
+                            <constraint firstItem="9QV-Rh-bBR" firstAttribute="leading" secondItem="Eix-Nm-wiF" secondAttribute="leading" id="RF3-RK-J8y"/>
+                            <constraint firstItem="9QV-Rh-bBR" firstAttribute="top" secondItem="Eix-Nm-wiF" secondAttribute="top" id="gLE-2P-Fjx"/>
+                            <constraint firstItem="Eix-Nm-wiF" firstAttribute="bottom" secondItem="QgL-vd-v57" secondAttribute="bottom" constant="50" id="ich-oO-JdN"/>
+                            <constraint firstItem="Eix-Nm-wiF" firstAttribute="trailing" secondItem="9QV-Rh-bBR" secondAttribute="trailing" id="qV9-s4-Pe4"/>
+                            <constraint firstItem="Eix-Nm-wiF" firstAttribute="bottom" secondItem="9QV-Rh-bBR" secondAttribute="bottom" id="qjb-ed-xOL"/>
+                            <constraint firstItem="pbn-L6-ZN9" firstAttribute="centerY" secondItem="GRG-kI-SmY" secondAttribute="centerY" id="wJa-3n-lFk"/>
+                            <constraint firstItem="Eix-Nm-wiF" firstAttribute="trailing" secondItem="pbn-L6-ZN9" secondAttribute="trailing" constant="-130" id="ySB-PA-rdw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Eix-Nm-wiF"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="J4a-aX-gcV" appends="YES" id="uPg-Km-Lff"/>
+                            <outletCollection property="gestureRecognizers" destination="5TI-U6-pDe" appends="YES" id="2S2-O6-BxM"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="floorsSlider" destination="pbn-L6-ZN9" id="Mfl-n9-kDu"/>
+                        <outlet property="sceneView" destination="9QV-Rh-bBR" id="IAb-q6-c97"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+                <pinchGestureRecognizer id="J4a-aX-gcV">
+                    <connections>
+                        <action selector="handlePinchWithRecognizer:" destination="BV1-FR-VrT" id="mHf-sc-Be8"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="5TI-U6-pDe">
+                    <connections>
+                        <action selector="handlePanWithRecognizer:" destination="BV1-FR-VrT" id="5iW-rZ-kos"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="117.39130434782609"/>
+        </scene>
+    </scenes>
+</document>
