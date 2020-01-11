@@ -7,7 +7,15 @@ import Foundation
 import SceneKit
 
 class FloorNode: ARHNode {
-    override init() {
+    private let floor: Floor
+
+    var height: Double {
+        return floor.height
+    }
+
+    init(floor: Floor) {
+        self.floor = floor
+
         super.init()
 
         let plane = SCNPlane()
@@ -20,5 +28,9 @@ class FloorNode: ARHNode {
         scale = SCNVector3(scaleRatio, scaleRatio, scaleRatio)
 
         eulerAngles.x = .pi / 2
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 }

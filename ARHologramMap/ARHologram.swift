@@ -7,15 +7,15 @@ import Foundation
 import SceneKit
 
 class ARHologram: ARHNode {
-    private var floors: [FloorFrameNode]! {
-        didSet {
-            if floors == nil {
-                floors = []
-            }
-        }
-    }
+//    private var floors: [FloorFrameNode]! {
+//        didSet {
+//            if floors == nil {
+//                floors = []
+//            }
+//        }
+//    }
 
-    private let highlight = FloorHighlightNode()
+//    private let highlight = FloorHighlightNode()
 
     private let floorHeight: Float = 0.02
     private let floorsCount = 5
@@ -34,15 +34,15 @@ class ARHologram: ARHNode {
     override init() {
         super.init()
 
-        floors = [FloorFrameNode](count: floorsCount, generator: {floorIndex in
-            return FloorFrameNode()
-        })
+//        floors = [FloorFrameNode](count: floorsCount, generator: {floorIndex in
+//            return FloorFrameNode()
+//        })
 
-        floors.forEach({floorNode in
-            addChildNode(floorNode)
-        })
+//        floors.forEach({floorNode in
+//            addChildNode(floorNode)
+//        })
 
-        addChildNode(highlight)
+//        addChildNode(highlight)
 
         addChildNode(BoxNode())
 
@@ -60,11 +60,11 @@ class ARHologram: ARHNode {
     private func arrangeFloors(height: Float) {
         SCNTransaction.animationDuration = 0.5
 
-        floors.enumerated().forEach({ (floorIndex, floorNode) in
-            floorNode.position.y = Float(floorIndex) * height
-        })
-
-        highlight.position.y = Float(currentFloor) * height
+//        floors.enumerated().forEach({ (floorIndex, floorNode) in
+//            floorNode.position.y = Float(floorIndex) * height
+//        })
+//
+//        highlight.position.y = Float(currentFloor) * height
     }
 
     func rotate(angle: Float) {

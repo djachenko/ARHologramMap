@@ -9,38 +9,62 @@
 /* Begin PBXBuildFile section */
 		401A4B060D237CEC384FFB2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 401A4ABC0BD1A33E1C921787 /* Main.storyboard */; };
 		401A4C3F3FDC64B548E64B54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 401A41AFCEF7D1B631D16192 /* LaunchScreen.storyboard */; };
+		4FD602064468E25F85757D19 /* libPods-ARHologramMap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EFA4FCD47D9E8C80C482F58 /* libPods-ARHologramMap.a */; };
 		BB88703A1D2F7EA496022FF3 /* HologramMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB8873F42621752F01FBA78C /* HologramMapViewController.xib */; };
 		BB8870815A6FF64FFF52BD9E /* GeometryCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB887530D45899F814520FBD /* GeometryCreator.swift */; };
+		BB8870942B11438AE439F724 /* BuildingNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB887477E0F7BF93252D68C7 /* BuildingNode.swift */; };
+		BB8870FC1775BA8F339571B5 /* FloorSelectorViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8871574934477353AD0FA7 /* FloorSelectorViewCell.swift */; };
+		BB887328711DFDA0A8F4EA7B /* FloorSelectorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB887477EA7BD45674745F39 /* FloorSelectorView.xib */; };
 		BB88748B3636E12EF6FCB0D2 /* FloorFrameNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8878F43266A660FDDB1284 /* FloorFrameNode.swift */; };
-		BB887542FC5B590166E2712E /* FloorNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB887B1EF0B762E91E70E81D /* FloorNode.swift */; };
+		BB887537A048BDAD789FF4E4 /* XibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB887AD1A5501AB5550E04D0 /* XibLoadableView.swift */; };
+		BB8876A3405213DAEA970E4C /* FloorNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB887F2052A87AE73E79AF6B /* FloorNode.swift */; };
 		BB88770F070C3DFC67AB5840 /* HologramMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB887A536637D104442084FB /* HologramMapViewController.swift */; };
+		BB8877F81DA075DE0173F4EA /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8871FAA61B9EA736632788 /* TestViewController.swift */; };
 		BB88787414BDEA3EF7481A37 /* ARHologram.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB88771D8EBEBCF115D676A1 /* ARHologram.swift */; };
 		BB887891AA2FA340980A37A4 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB887DF0EB4FE1DF226B92FF /* Array+Extensions.swift */; };
 		BB88794DFEAAC20F61D78E0E /* BoxNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB887B4345708CA8B05EA335 /* BoxNode.swift */; };
 		BB887ABBC6A2F02B420054EB /* SCNNode+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8874961AEDA80DF96CDF29 /* SCNNode+Extensions.swift */; };
 		BB887AE7674CFAAC301F2C44 /* ARHNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8873137FE3338726334AA5 /* ARHNode.swift */; };
+		BB887BCCD23974AB46A57C99 /* FloorSelectorViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB8873802A45EE889D8F5952 /* FloorSelectorViewCell.xib */; };
 		BB887C3A57606D0E47B23EF8 /* SCNVector3+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8870ECA0E126A865B7AFCC /* SCNVector3+Extensions.swift */; };
+		BB887D9B7B4F4538454B431D /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB887270EECAD5B4651F25E7 /* TestViewController.xib */; };
+		BB887DEE2E8A1C89461DA67F /* Floor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB88789D3AD0C1C28AA14C47 /* Floor.swift */; };
 		BB887E023B92738BF1C34367 /* FloorHighlightNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB887C269F39B489D7FFCF33 /* FloorHighlightNode.swift */; };
+		BB887E2FA0C281494F450FAD /* Building.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB887CA474E5B601906DF2B1 /* Building.swift */; };
+		BB887F046F7DC46E0C5D2D68 /* FloorSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8870EEAFDF354CB4E36850 /* FloorSelectorView.swift */; };
 		D07CEEA11FBC550100523ED4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07CEEA01FBC550100523ED4 /* AppDelegate.swift */; };
 		D07CEEA51FBC550100523ED4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07CEEA41FBC550100523ED4 /* ViewController.swift */; };
 		D07CEEAA1FBC550100523ED4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D07CEEA91FBC550100523ED4 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D424A5000EA729434EC87E0 /* Pods-ARHologramMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARHologramMap.debug.xcconfig"; path = "Target Support Files/Pods-ARHologramMap/Pods-ARHologramMap.debug.xcconfig"; sourceTree = "<group>"; };
 		401A46DCF114165E12A83724 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		401A4965788ABEA05F66BD4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
+		7EFA4FCD47D9E8C80C482F58 /* libPods-ARHologramMap.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ARHologramMap.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB8870ECA0E126A865B7AFCC /* SCNVector3+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SCNVector3+Extensions.swift"; sourceTree = "<group>"; };
+		BB8870EEAFDF354CB4E36850 /* FloorSelectorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloorSelectorView.swift; sourceTree = "<group>"; };
+		BB8871574934477353AD0FA7 /* FloorSelectorViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloorSelectorViewCell.swift; sourceTree = "<group>"; };
+		BB8871FAA61B9EA736632788 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		BB887270EECAD5B4651F25E7 /* TestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
 		BB8873137FE3338726334AA5 /* ARHNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARHNode.swift; sourceTree = "<group>"; };
+		BB8873802A45EE889D8F5952 /* FloorSelectorViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FloorSelectorViewCell.xib; sourceTree = "<group>"; };
 		BB8873F42621752F01FBA78C /* HologramMapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HologramMapViewController.xib; sourceTree = "<group>"; };
+		BB887477E0F7BF93252D68C7 /* BuildingNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildingNode.swift; sourceTree = "<group>"; };
+		BB887477EA7BD45674745F39 /* FloorSelectorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FloorSelectorView.xib; sourceTree = "<group>"; };
 		BB8874961AEDA80DF96CDF29 /* SCNNode+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SCNNode+Extensions.swift"; sourceTree = "<group>"; };
 		BB887530D45899F814520FBD /* GeometryCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeometryCreator.swift; sourceTree = "<group>"; };
 		BB88771D8EBEBCF115D676A1 /* ARHologram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARHologram.swift; sourceTree = "<group>"; };
+		BB88789D3AD0C1C28AA14C47 /* Floor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Floor.swift; sourceTree = "<group>"; };
 		BB8878F43266A660FDDB1284 /* FloorFrameNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloorFrameNode.swift; sourceTree = "<group>"; };
 		BB887A536637D104442084FB /* HologramMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HologramMapViewController.swift; sourceTree = "<group>"; };
-		BB887B1EF0B762E91E70E81D /* FloorNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloorNode.swift; sourceTree = "<group>"; };
+		BB887AD1A5501AB5550E04D0 /* XibLoadableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XibLoadableView.swift; sourceTree = "<group>"; };
 		BB887B4345708CA8B05EA335 /* BoxNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxNode.swift; sourceTree = "<group>"; };
 		BB887C269F39B489D7FFCF33 /* FloorHighlightNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloorHighlightNode.swift; sourceTree = "<group>"; };
+		BB887CA474E5B601906DF2B1 /* Building.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Building.swift; sourceTree = "<group>"; };
 		BB887DF0EB4FE1DF226B92FF /* Array+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
+		BB887F2052A87AE73E79AF6B /* FloorNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloorNode.swift; sourceTree = "<group>"; };
+		C112113505FB4DC4F141A7A9 /* Pods-ARHologramMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARHologramMap.release.xcconfig"; path = "Target Support Files/Pods-ARHologramMap/Pods-ARHologramMap.release.xcconfig"; sourceTree = "<group>"; };
 		D07CEE9D1FBC550100523ED4 /* ARHologramMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARHologramMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D07CEEA01FBC550100523ED4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D07CEEA41FBC550100523ED4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FD602064468E25F85757D19 /* libPods-ARHologramMap.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +93,51 @@
 			path = Base.lproj;
 			sourceTree = "<group>";
 		};
+		488D34356612E0987825D8C9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7EFA4FCD47D9E8C80C482F58 /* libPods-ARHologramMap.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AF48855EFE41449EB44CFA45 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2D424A5000EA729434EC87E0 /* Pods-ARHologramMap.debug.xcconfig */,
+				C112113505FB4DC4F141A7A9 /* Pods-ARHologramMap.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BB8871471655A84D4A83E90E /* FloorSelectorView */ = {
+			isa = PBXGroup;
+			children = (
+				BB887477EA7BD45674745F39 /* FloorSelectorView.xib */,
+				BB8870EEAFDF354CB4E36850 /* FloorSelectorView.swift */,
+				BB8879CCE8A199427D1409F0 /* FloorSelectorViewCell */,
+			);
+			path = FloorSelectorView;
+			sourceTree = "<group>";
+		};
+		BB88734934A05CA109CE53E0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BB887CA474E5B601906DF2B1 /* Building.swift */,
+				BB88789D3AD0C1C28AA14C47 /* Floor.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BB887755A74F52CFA69A177A /* TestViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BB8871FAA61B9EA736632788 /* TestViewController.swift */,
+				BB887270EECAD5B4651F25E7 /* TestViewController.xib */,
+			);
+			path = TestViewController;
+			sourceTree = "<group>";
+		};
 		BB8879BFD2FCADFC8AF978C9 /* HologramMapViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -77,11 +147,31 @@
 			path = HologramMapViewController;
 			sourceTree = "<group>";
 		};
+		BB8879CCE8A199427D1409F0 /* FloorSelectorViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				BB8871574934477353AD0FA7 /* FloorSelectorViewCell.swift */,
+				BB8873802A45EE889D8F5952 /* FloorSelectorViewCell.xib */,
+			);
+			path = FloorSelectorViewCell;
+			sourceTree = "<group>";
+		};
+		BB887EF75AC464D69F302A68 /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				BB887F2052A87AE73E79AF6B /* FloorNode.swift */,
+				BB887477E0F7BF93252D68C7 /* BuildingNode.swift */,
+			);
+			path = Nodes;
+			sourceTree = "<group>";
+		};
 		D07CEE941FBC550100523ED4 = {
 			isa = PBXGroup;
 			children = (
 				D07CEE9F1FBC550100523ED4 /* ARHologramMap */,
 				D07CEE9E1FBC550100523ED4 /* Products */,
+				AF48855EFE41449EB44CFA45 /* Pods */,
+				488D34356612E0987825D8C9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,21 +187,25 @@
 			isa = PBXGroup;
 			children = (
 				D07CEEA01FBC550100523ED4 /* AppDelegate.swift */,
-				D07CEEA41FBC550100523ED4 /* ViewController.swift */,
-				D07CEEA91FBC550100523ED4 /* Assets.xcassets */,
-				D07CEEAE1FBC550100523ED4 /* Info.plist */,
-				BB88771D8EBEBCF115D676A1 /* ARHologram.swift */,
 				BB8873137FE3338726334AA5 /* ARHNode.swift */,
-				BB887B1EF0B762E91E70E81D /* FloorNode.swift */,
-				BB887C269F39B489D7FFCF33 /* FloorHighlightNode.swift */,
+				BB88771D8EBEBCF115D676A1 /* ARHologram.swift */,
 				BB887DF0EB4FE1DF226B92FF /* Array+Extensions.swift */,
-				BB8874961AEDA80DF96CDF29 /* SCNNode+Extensions.swift */,
-				BB8878F43266A660FDDB1284 /* FloorFrameNode.swift */,
-				BB887B4345708CA8B05EA335 /* BoxNode.swift */,
-				BB8870ECA0E126A865B7AFCC /* SCNVector3+Extensions.swift */,
-				BB8879BFD2FCADFC8AF978C9 /* HologramMapViewController */,
-				BB887530D45899F814520FBD /* GeometryCreator.swift */,
+				D07CEEA91FBC550100523ED4 /* Assets.xcassets */,
 				401A46440B07D2AC97F2955B /* Base.lproj */,
+				BB887B4345708CA8B05EA335 /* BoxNode.swift */,
+				BB8878F43266A660FDDB1284 /* FloorFrameNode.swift */,
+				BB887C269F39B489D7FFCF33 /* FloorHighlightNode.swift */,
+				BB887530D45899F814520FBD /* GeometryCreator.swift */,
+				BB8879BFD2FCADFC8AF978C9 /* HologramMapViewController */,
+				D07CEEAE1FBC550100523ED4 /* Info.plist */,
+				BB88734934A05CA109CE53E0 /* Models */,
+				BB887EF75AC464D69F302A68 /* Nodes */,
+				BB8874961AEDA80DF96CDF29 /* SCNNode+Extensions.swift */,
+				BB8870ECA0E126A865B7AFCC /* SCNVector3+Extensions.swift */,
+				D07CEEA41FBC550100523ED4 /* ViewController.swift */,
+				BB887AD1A5501AB5550E04D0 /* XibLoadableView.swift */,
+				BB8871471655A84D4A83E90E /* FloorSelectorView */,
+				BB887755A74F52CFA69A177A /* TestViewController */,
 			);
 			path = ARHologramMap;
 			sourceTree = "<group>";
@@ -123,6 +217,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D07CEEB11FBC550100523ED4 /* Build configuration list for PBXNativeTarget "ARHologramMap" */;
 			buildPhases = (
+				9E5191B2E0C846F2A47D7024 /* [CP] Check Pods Manifest.lock */,
 				D07CEE991FBC550100523ED4 /* Sources */,
 				D07CEE9A1FBC550100523ED4 /* Frameworks */,
 				D07CEE9B1FBC550100523ED4 /* Resources */,
@@ -180,10 +275,38 @@
 				BB88703A1D2F7EA496022FF3 /* HologramMapViewController.xib in Resources */,
 				401A4B060D237CEC384FFB2E /* Main.storyboard in Resources */,
 				401A4C3F3FDC64B548E64B54 /* LaunchScreen.storyboard in Resources */,
+				BB887328711DFDA0A8F4EA7B /* FloorSelectorView.xib in Resources */,
+				BB887D9B7B4F4538454B431D /* TestViewController.xib in Resources */,
+				BB887BCCD23974AB46A57C99 /* FloorSelectorViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9E5191B2E0C846F2A47D7024 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ARHologramMap-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D07CEE991FBC550100523ED4 /* Sources */ = {
@@ -194,7 +317,6 @@
 				D07CEEA11FBC550100523ED4 /* AppDelegate.swift in Sources */,
 				BB88787414BDEA3EF7481A37 /* ARHologram.swift in Sources */,
 				BB887AE7674CFAAC301F2C44 /* ARHNode.swift in Sources */,
-				BB887542FC5B590166E2712E /* FloorNode.swift in Sources */,
 				BB887E023B92738BF1C34367 /* FloorHighlightNode.swift in Sources */,
 				BB887891AA2FA340980A37A4 /* Array+Extensions.swift in Sources */,
 				BB887ABBC6A2F02B420054EB /* SCNNode+Extensions.swift in Sources */,
@@ -203,6 +325,14 @@
 				BB887C3A57606D0E47B23EF8 /* SCNVector3+Extensions.swift in Sources */,
 				BB88770F070C3DFC67AB5840 /* HologramMapViewController.swift in Sources */,
 				BB8870815A6FF64FFF52BD9E /* GeometryCreator.swift in Sources */,
+				BB887E2FA0C281494F450FAD /* Building.swift in Sources */,
+				BB887DEE2E8A1C89461DA67F /* Floor.swift in Sources */,
+				BB8876A3405213DAEA970E4C /* FloorNode.swift in Sources */,
+				BB8870942B11438AE439F724 /* BuildingNode.swift in Sources */,
+				BB887537A048BDAD789FF4E4 /* XibLoadableView.swift in Sources */,
+				BB887F046F7DC46E0C5D2D68 /* FloorSelectorView.swift in Sources */,
+				BB8877F81DA075DE0173F4EA /* TestViewController.swift in Sources */,
+				BB8870FC1775BA8F339571B5 /* FloorSelectorViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +471,7 @@
 		};
 		D07CEEB21FBC550100523ED4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D424A5000EA729434EC87E0 /* Pods-ARHologramMap.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -357,6 +488,7 @@
 		};
 		D07CEEB31FBC550100523ED4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C112113505FB4DC4F141A7A9 /* Pods-ARHologramMap.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

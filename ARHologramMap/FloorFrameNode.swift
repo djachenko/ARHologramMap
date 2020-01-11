@@ -6,10 +6,10 @@
 import Foundation
 import UIKit
 
-class FloorFrameNode: FloorNode {
-    override init() {
-        super.init()
-
-        geometry?.firstMaterial?.diffuse.contents = UIImage(named: "floor_frame")
-    }
-}
+//class FloorFrameNode: FloorNode {
+//    override init() {
+//        super.init()
+//
+//        geometry?.firstMaterial?.diffuse.contents = UIImage(named: "floor_frame")
+//    }
+//}

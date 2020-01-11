@@ -1,0 +1,24 @@
+PODS:
+  - Reusable (4.1.0):
+    - Reusable/Storyboard (= 4.1.0)
+    - Reusable/View (= 4.1.0)
+  - Reusable/Storyboard (4.1.0)
+  - Reusable/View (4.1.0)
+  - TableKit (2.10.0)
+
+DEPENDENCIES:
+  - Reusable
+  - TableKit
+
+SPEC REPOS:
+  trunk:
+    - Reusable
+    - TableKit
+
+SPEC CHECKSUMS:
+  Reusable: 82be188f29d96dc5eff0db7b2393bcc08d2cdd5b
+  TableKit: 65645d0dd786e21dc61464da59ad770c60a07282
+
+PODFILE CHECKSUM: 9e383bb38948d82ffeda7b7cd9c391eb642546d3
+
+COCOAPODS: 1.8.4

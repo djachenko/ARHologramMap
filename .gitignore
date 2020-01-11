@@ -1,4 +1,8 @@
 
-ARHologramMap.xcodeproj/project.xcworkspace/xcuserdata/
+xcuserdata/
 
 ARHologramMap.xcodeproj/xcuserdata/
+
+.idea/
+
+Pods/
