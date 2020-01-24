@@ -6,3 +6,7 @@ ARHologramMap.xcodeproj/xcuserdata/
 .idea/
 
 Pods/
+
+venv/
+
+__pycache__/
