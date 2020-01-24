@@ -32,4 +32,16 @@ extension SCNNode {
         quiverNode.name = "Axes"
         return quiverNode
     }
+
+    class func cube(side: CGFloat) -> SCNNode {
+        let geometry = SCNBox.cube(side: side)
+
+        return SCNNode(geometry: geometry)
+    }
+}
+
+extension SCNBox {
+    class func cube(side: CGFloat) -> SCNBox {
+        return SCNBox(width: side, height: side, length: side, chamferRadius: 0)
+    }
 }

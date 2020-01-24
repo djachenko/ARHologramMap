@@ -82,6 +82,14 @@ extension SCNVector3 {
         )
     }
 
+    static func crossProduct(a: SCNVector3, b: SCNVector3) -> SCNVector3 {
+        return SCNVector3(
+                a.y * b.z - a.z * b.y,
+                a.z * b.x - a.x * b.z,
+                a.x * b.y - a.y * b.x
+        )
+    }
+
     init(unifiedValue: Float) {
         self.init(x: unifiedValue, y: unifiedValue, z: unifiedValue)
     }

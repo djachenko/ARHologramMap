@@ -18,9 +18,7 @@ protocol GeometryCreator {
 
 class TriangleCreator : GeometryCreator {
     func createGeometry(anchor: ARPlaneAnchor) -> SCNGeometry {
-        let vertices = anchor.geometry.vertices.map { vector in
-            return SCNVector3(x: vector[0], y: vector[1], z: vector[2])
-        }
+        let vertices = [SCNVector3](anchor.geometry.vertices)
 
         let indices = anchor.geometry.triangleIndices
 
