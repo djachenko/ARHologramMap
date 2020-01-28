@@ -1,10 +1,11 @@
 import json
 from typing import Dict
 
-from floor import Floor
+from models.floor import Floor
+from models.hologram_entity import HologramEntity
 
 
-class Building:
+class Building(HologramEntity):
     def __init__(self, floors: Dict[int, Floor] = None, floor_height: float = None) -> None:
         super().__init__()
 
@@ -27,7 +28,7 @@ class Building:
     def __getitem__(self, floor_index: int) -> Floor:
         return self.__floors[floor_index]
 
-    def to_json(self):
+    def to_json(self) -> Dict:
         result = {
             "floors": {index: floor.to_json() for index, floor in self.__floors.items()}
         }

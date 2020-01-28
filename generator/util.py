@@ -4,7 +4,7 @@ from typing import Optional, Tuple
 
 def relation(*values: float) -> Optional[Tuple[int, ...]]:
     max_factor = round(min(values))
-    tolerance = 0.8
+    tolerance = 0.2
 
     pairing_indices = list(itertools.product(range(len(values)), repeat=2))
 

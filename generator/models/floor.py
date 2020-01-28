@@ -1,7 +1,9 @@
-from typing import Tuple, List
+from typing import Tuple, List, Dict
+
+from models.hologram_entity import HologramEntity
 
 
-class Floor:
+class Floor(HologramEntity):
     def __init__(
             self,
             floor: List[Tuple[float, float]],
@@ -26,7 +28,7 @@ class Floor:
     def ceil(self, value: List[Tuple[float, float]]):
         self.__ceil = value
 
-    def to_json(self):
+    def to_json(self) -> Dict:
         result = {
             "floor": [[x, z] for x, z in self.__floor],
         }
