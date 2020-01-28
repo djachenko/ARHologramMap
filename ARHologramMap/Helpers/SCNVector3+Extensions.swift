@@ -93,4 +93,8 @@ extension SCNVector3 {
     init(unifiedValue: Float) {
         self.init(x: unifiedValue, y: unifiedValue, z: unifiedValue)
     }
+
+//    init(x: CGFloat, y: CGFloat, z: CGFloat) {
+//        self.init(x, y, z)
+//    }
 }

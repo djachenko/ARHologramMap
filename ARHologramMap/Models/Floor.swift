@@ -5,9 +5,12 @@
 
 
 import Foundation
-import CoreGraphics
 
 struct Floor {
-    let corners: [CGPoint]
-    let height: Double
+    let floor: [Point2D]
+    let ceiling: [Point2D]?
+    let height: Real?
+}
+
+extension Floor: Decodable {
 }

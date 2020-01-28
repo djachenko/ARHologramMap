@@ -30,6 +30,10 @@ extension Array {
     func any(_ predicate: (Element) -> Bool) -> Bool {
         return !all(predicate)
     }
+
+    func mapToDict<Key: Hashable, Value>(_ transform: (Element) -> (Key, Value)) -> [Key: Value] {
+        return [Key: Value](uniqueKeysWithValues: map(transform))
+    }
 }
 
 extension Array where Element == Bool {

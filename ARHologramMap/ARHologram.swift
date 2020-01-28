@@ -44,8 +44,6 @@ class ARHologram: ARHNode {
 
 //        addChildNode(highlight)
 
-        addChildNode(BoxNode())
-
         arrangeFloors(height: floorHeight)
     }
 

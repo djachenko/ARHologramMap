@@ -5,9 +5,11 @@
 
 
 import Foundation
-import CoreGraphics
 
 struct Building {
-    let origin: CGPoint
-    let floors: [Floor]
+    let floors: [Int: Floor]
+    let default_height: Real
+}
+
+extension Building: Decodable {
 }

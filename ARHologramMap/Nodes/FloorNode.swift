@@ -10,7 +10,7 @@ class FloorNode: ARHNode {
     private let floor: Floor
 
     var height: Double {
-        return floor.height
+        return 0 //floor.height
     }
 
     init(floor: Floor) {

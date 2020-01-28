@@ -97,9 +97,15 @@ class HologramMapViewController: UIViewController {
             return
         }
 
-        let cube = SCNNode.cube(side: 0.25)
+//        let cube = SCNNode.cube(side: 0.25)
 
-        node.addChildNode(cube)
+        let data = DataService.getJson()!
+
+        let building = try! JSONDecoder().decode(Building.self, from: data)
+        let buildingGeometry = BuildingGeometry.build(from: building)
+        let buildingNode = SCNNode(geometry: buildingGeometry)
+
+        node.addChildNode(buildingNode)
 
         stopTimer()
         activePlane = nil
