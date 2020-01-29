@@ -7,75 +7,81 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		401A4B060D237CEC384FFB2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 401A4ABC0BD1A33E1C921787 /* Main.storyboard */; };
-		401A4C3F3FDC64B548E64B54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 401A41AFCEF7D1B631D16192 /* LaunchScreen.storyboard */; };
 		4FD602064468E25F85757D19 /* libPods-ARHologramMap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EFA4FCD47D9E8C80C482F58 /* libPods-ARHologramMap.a */; };
-		BB88703A1D2F7EA496022FF3 /* HologramMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB8873F42621752F01FBA78C /* HologramMapViewController.xib */; };
-		BB8870815A6FF64FFF52BD9E /* GeometryCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB887530D45899F814520FBD /* GeometryCreator.swift */; };
-		BB8870942B11438AE439F724 /* BuildingNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB887477E0F7BF93252D68C7 /* BuildingNode.swift */; };
-		BB8870F542079A2B535A16A5 /* Vector2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8870EC1103A64A173C45CE /* Vector2D.swift */; };
-		BB8870FC1775BA8F339571B5 /* FloorSelectorViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8871574934477353AD0FA7 /* FloorSelectorViewCell.swift */; };
-		BB8872CA5186D02037D04BB9 /* XibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB887804DD52D4F7EDD53017 /* XibLoadableView.swift */; };
-		BB887328711DFDA0A8F4EA7B /* FloorSelectorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB887477EA7BD45674745F39 /* FloorSelectorView.xib */; };
-		BB8873AF7CDF79BE8A098734 /* BuildingGeometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB88758E62F26DF55B7E4B83 /* BuildingGeometry.swift */; };
-		BB8876A3405213DAEA970E4C /* FloorNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB887F2052A87AE73E79AF6B /* FloorNode.swift */; };
-		BB88770F070C3DFC67AB5840 /* HologramMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB887A536637D104442084FB /* HologramMapViewController.swift */; };
-		BB8877F81DA075DE0173F4EA /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8871FAA61B9EA736632788 /* TestViewController.swift */; };
-		BB88787414BDEA3EF7481A37 /* ARHologram.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB88771D8EBEBCF115D676A1 /* ARHologram.swift */; };
-		BB887892BA883C09545C98F4 /* SCNVector3+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB88765276EF6E6747FFD86A /* SCNVector3+Extensions.swift */; };
-		BB887A2134F51934A23A02A2 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB887F05D3C7A60F1E0AB1F7 /* Array+Extensions.swift */; };
-		BB887AE7674CFAAC301F2C44 /* ARHNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8873137FE3338726334AA5 /* ARHNode.swift */; };
-		BB887AEC063245FBE5E89F31 /* CGRect+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB887433743715F463433A68 /* CGRect+Extensions.swift */; };
-		BB887BCCD23974AB46A57C99 /* FloorSelectorViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB8873802A45EE889D8F5952 /* FloorSelectorViewCell.xib */; };
-		BB887D9B7B4F4538454B431D /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB887270EECAD5B4651F25E7 /* TestViewController.xib */; };
-		BB887DDD60475514E6553123 /* Plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8871AFEFC5FA897972D5E2 /* Plane.swift */; };
-		BB887DEE2E8A1C89461DA67F /* Floor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB88789D3AD0C1C28AA14C47 /* Floor.swift */; };
-		BB887E2FA0C281494F450FAD /* Building.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB887CA474E5B601906DF2B1 /* Building.swift */; };
-		BB887E5A9FD01D850B65074E /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB88766A773C9005312EF42F /* Typealiases.swift */; };
-		BB887E97612602D1C517DD00 /* SCNNode+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB887FC2F4A1F2FADAB43CD1 /* SCNNode+Extensions.swift */; };
-		BB887F046F7DC46E0C5D2D68 /* FloorSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8870EEAFDF354CB4E36850 /* FloorSelectorView.swift */; };
-		BB887FBFA31CD46618F94677 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8874582055D26B8CAF6E2B /* DataService.swift */; };
-		D07CEEA11FBC550100523ED4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07CEEA01FBC550100523ED4 /* AppDelegate.swift */; };
-		D07CEEA51FBC550100523ED4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07CEEA41FBC550100523ED4 /* ViewController.swift */; };
-		D07CEEAA1FBC550100523ED4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D07CEEA91FBC550100523ED4 /* Assets.xcassets */; };
+		BB8876A6BF3D2A3FFB07AA11 /* technopark.json in Resources */ = {isa = PBXBuildFile; fileRef = BB88717ACFD91756C7D5F3AD /* technopark.json */; };
+		BB887C767D43D0168396B4BC /* cube.json in Resources */ = {isa = PBXBuildFile; fileRef = BB8878FCDB3FDBD14A669F9B /* cube.json */; };
+		BB887CCDDFF859DEEABA829F /* registry.json in Resources */ = {isa = PBXBuildFile; fileRef = BB887CFDD164AFA91143E8D6 /* registry.json */; };
+		D01948B723E1C7F9001E619F /* Plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = D019488E23E1C7F8001E619F /* Plane.swift */; };
+		D01948B823E1C7F9001E619F /* BuildingNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D019489023E1C7F8001E619F /* BuildingNode.swift */; };
+		D01948B923E1C7F9001E619F /* FloorNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D019489123E1C7F8001E619F /* FloorNode.swift */; };
+		D01948BB23E1C7F9001E619F /* FloorSelectorViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D019489523E1C7F8001E619F /* FloorSelectorViewCell.swift */; };
+		D01948BC23E1C7F9001E619F /* FloorSelectorViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D019489623E1C7F8001E619F /* FloorSelectorViewCell.xib */; };
+		D01948BD23E1C7F9001E619F /* FloorSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D019489723E1C7F8001E619F /* FloorSelectorView.swift */; };
+		D01948BE23E1C7F9001E619F /* FloorSelectorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D019489823E1C7F8001E619F /* FloorSelectorView.xib */; };
+		D01948BF23E1C7F9001E619F /* ARHNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D019489923E1C7F8001E619F /* ARHNode.swift */; };
+		D01948C023E1C7F9001E619F /* Vector2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = D019489A23E1C7F8001E619F /* Vector2D.swift */; };
+		D01948C123E1C7F9001E619F /* HologramMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D019489C23E1C7F8001E619F /* HologramMapViewController.swift */; };
+		D01948C223E1C7F9001E619F /* HologramMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D019489D23E1C7F8001E619F /* HologramMapViewController.xib */; };
+		D01948C323E1C7F9001E619F /* GeometryCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D019489E23E1C7F8001E619F /* GeometryCreator.swift */; };
+		D01948C423E1C7F9001E619F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D01948A023E1C7F8001E619F /* LaunchScreen.storyboard */; };
+		D01948C523E1C7F9001E619F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D01948A223E1C7F8001E619F /* Main.storyboard */; };
+		D01948C623E1C7F9001E619F /* ARHologram.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01948A423E1C7F8001E619F /* ARHologram.swift */; };
+		D01948C723E1C7F9001E619F /* Building.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01948A623E1C7F8001E619F /* Building.swift */; };
+		D01948C823E1C7F9001E619F /* Floor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01948A723E1C7F8001E619F /* Floor.swift */; };
+		D01948C923E1C7F9001E619F /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01948A923E1C7F9001E619F /* Array+Extensions.swift */; };
+		D01948CA23E1C7F9001E619F /* SCNVector3+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01948AA23E1C7F9001E619F /* SCNVector3+Extensions.swift */; };
+		D01948CB23E1C7F9001E619F /* XibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01948AB23E1C7F9001E619F /* XibLoadableView.swift */; };
+		D01948CC23E1C7F9001E619F /* CGRect+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01948AC23E1C7F9001E619F /* CGRect+Extensions.swift */; };
+		D01948CD23E1C7F9001E619F /* SCNNode+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01948AD23E1C7F9001E619F /* SCNNode+Extensions.swift */; };
+		D01948CE23E1C7F9001E619F /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01948AE23E1C7F9001E619F /* Typealiases.swift */; };
+		D01948CF23E1C7F9001E619F /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01948AF23E1C7F9001E619F /* DataService.swift */; };
+		D01948D023E1C7F9001E619F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01948B023E1C7F9001E619F /* ViewController.swift */; };
+		D01948D123E1C7F9001E619F /* BuildingGeometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01948B123E1C7F9001E619F /* BuildingGeometry.swift */; };
+		D01948D223E1C7F9001E619F /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01948B323E1C7F9001E619F /* TestViewController.swift */; };
+		D01948D323E1C7F9001E619F /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D01948B423E1C7F9001E619F /* TestViewController.xib */; };
+		D01948D423E1C7F9001E619F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01948B523E1C7F9001E619F /* AppDelegate.swift */; };
+		D01948D523E1C7F9001E619F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D01948B623E1C7F9001E619F /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2D424A5000EA729434EC87E0 /* Pods-ARHologramMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARHologramMap.debug.xcconfig"; path = "Target Support Files/Pods-ARHologramMap/Pods-ARHologramMap.debug.xcconfig"; sourceTree = "<group>"; };
-		401A46DCF114165E12A83724 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		401A4965788ABEA05F66BD4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
 		7EFA4FCD47D9E8C80C482F58 /* libPods-ARHologramMap.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ARHologramMap.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BB8870EC1103A64A173C45CE /* Vector2D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vector2D.swift; sourceTree = "<group>"; };
-		BB8870EEAFDF354CB4E36850 /* FloorSelectorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloorSelectorView.swift; sourceTree = "<group>"; };
-		BB8871574934477353AD0FA7 /* FloorSelectorViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloorSelectorViewCell.swift; sourceTree = "<group>"; };
-		BB8871AFEFC5FA897972D5E2 /* Plane.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plane.swift; sourceTree = "<group>"; };
-		BB8871FAA61B9EA736632788 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
-		BB887270EECAD5B4651F25E7 /* TestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
-		BB8873137FE3338726334AA5 /* ARHNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARHNode.swift; sourceTree = "<group>"; };
-		BB8873802A45EE889D8F5952 /* FloorSelectorViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FloorSelectorViewCell.xib; sourceTree = "<group>"; };
-		BB8873F42621752F01FBA78C /* HologramMapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HologramMapViewController.xib; sourceTree = "<group>"; };
-		BB887433743715F463433A68 /* CGRect+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+Extensions.swift"; sourceTree = "<group>"; };
-		BB8874582055D26B8CAF6E2B /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
-		BB887477E0F7BF93252D68C7 /* BuildingNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildingNode.swift; sourceTree = "<group>"; };
-		BB887477EA7BD45674745F39 /* FloorSelectorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FloorSelectorView.xib; sourceTree = "<group>"; };
-		BB887530D45899F814520FBD /* GeometryCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeometryCreator.swift; sourceTree = "<group>"; };
-		BB88758E62F26DF55B7E4B83 /* BuildingGeometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildingGeometry.swift; sourceTree = "<group>"; };
-		BB88765276EF6E6747FFD86A /* SCNVector3+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SCNVector3+Extensions.swift"; sourceTree = "<group>"; };
-		BB88766A773C9005312EF42F /* Typealiases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
-		BB88771D8EBEBCF115D676A1 /* ARHologram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARHologram.swift; sourceTree = "<group>"; };
-		BB887804DD52D4F7EDD53017 /* XibLoadableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XibLoadableView.swift; sourceTree = "<group>"; };
-		BB88789D3AD0C1C28AA14C47 /* Floor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Floor.swift; sourceTree = "<group>"; };
-		BB887A536637D104442084FB /* HologramMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HologramMapViewController.swift; sourceTree = "<group>"; };
-		BB887CA474E5B601906DF2B1 /* Building.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Building.swift; sourceTree = "<group>"; };
-		BB887F05D3C7A60F1E0AB1F7 /* Array+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
-		BB887F2052A87AE73E79AF6B /* FloorNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloorNode.swift; sourceTree = "<group>"; };
-		BB887FC2F4A1F2FADAB43CD1 /* SCNNode+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SCNNode+Extensions.swift"; sourceTree = "<group>"; };
+		BB88717ACFD91756C7D5F3AD /* technopark.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = technopark.json; sourceTree = "<group>"; };
+		BB8878FCDB3FDBD14A669F9B /* cube.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cube.json; sourceTree = "<group>"; };
+		BB887CFDD164AFA91143E8D6 /* registry.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = registry.json; sourceTree = "<group>"; };
 		C112113505FB4DC4F141A7A9 /* Pods-ARHologramMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARHologramMap.release.xcconfig"; path = "Target Support Files/Pods-ARHologramMap/Pods-ARHologramMap.release.xcconfig"; sourceTree = "<group>"; };
+		D019488E23E1C7F8001E619F /* Plane.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plane.swift; sourceTree = "<group>"; };
+		D019489023E1C7F8001E619F /* BuildingNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildingNode.swift; sourceTree = "<group>"; };
+		D019489123E1C7F8001E619F /* FloorNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloorNode.swift; sourceTree = "<group>"; };
+		D019489223E1C7F8001E619F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D019489523E1C7F8001E619F /* FloorSelectorViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloorSelectorViewCell.swift; sourceTree = "<group>"; };
+		D019489623E1C7F8001E619F /* FloorSelectorViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FloorSelectorViewCell.xib; sourceTree = "<group>"; };
+		D019489723E1C7F8001E619F /* FloorSelectorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloorSelectorView.swift; sourceTree = "<group>"; };
+		D019489823E1C7F8001E619F /* FloorSelectorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FloorSelectorView.xib; sourceTree = "<group>"; };
+		D019489923E1C7F8001E619F /* ARHNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARHNode.swift; sourceTree = "<group>"; };
+		D019489A23E1C7F8001E619F /* Vector2D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vector2D.swift; sourceTree = "<group>"; };
+		D019489C23E1C7F8001E619F /* HologramMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HologramMapViewController.swift; sourceTree = "<group>"; };
+		D019489D23E1C7F8001E619F /* HologramMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HologramMapViewController.xib; sourceTree = "<group>"; };
+		D019489E23E1C7F8001E619F /* GeometryCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeometryCreator.swift; sourceTree = "<group>"; };
+		D01948A123E1C7F8001E619F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D01948A323E1C7F8001E619F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
+		D01948A423E1C7F8001E619F /* ARHologram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARHologram.swift; sourceTree = "<group>"; };
+		D01948A623E1C7F8001E619F /* Building.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Building.swift; sourceTree = "<group>"; };
+		D01948A723E1C7F8001E619F /* Floor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Floor.swift; sourceTree = "<group>"; };
+		D01948A923E1C7F9001E619F /* Array+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
+		D01948AA23E1C7F9001E619F /* SCNVector3+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SCNVector3+Extensions.swift"; sourceTree = "<group>"; };
+		D01948AB23E1C7F9001E619F /* XibLoadableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XibLoadableView.swift; sourceTree = "<group>"; };
+		D01948AC23E1C7F9001E619F /* CGRect+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+Extensions.swift"; sourceTree = "<group>"; };
+		D01948AD23E1C7F9001E619F /* SCNNode+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SCNNode+Extensions.swift"; sourceTree = "<group>"; };
+		D01948AE23E1C7F9001E619F /* Typealiases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
+		D01948AF23E1C7F9001E619F /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		D01948B023E1C7F9001E619F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D01948B123E1C7F9001E619F /* BuildingGeometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildingGeometry.swift; sourceTree = "<group>"; };
+		D01948B323E1C7F9001E619F /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		D01948B423E1C7F9001E619F /* TestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
+		D01948B523E1C7F9001E619F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D01948B623E1C7F9001E619F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D07CEE9D1FBC550100523ED4 /* ARHologramMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARHologramMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D07CEEA01FBC550100523ED4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D07CEEA41FBC550100523ED4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D07CEEA91FBC550100523ED4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D07CEEAE1FBC550100523ED4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,15 +96,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		401A46440B07D2AC97F2955B /* Base.lproj */ = {
-			isa = PBXGroup;
-			children = (
-				401A4ABC0BD1A33E1C921787 /* Main.storyboard */,
-				401A41AFCEF7D1B631D16192 /* LaunchScreen.storyboard */,
-			);
-			path = Base.lproj;
-			sourceTree = "<group>";
-		};
 		488D34356612E0987825D8C9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,71 +113,90 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		BB8871471655A84D4A83E90E /* FloorSelectorView */ = {
+		BB8871D67B40039A0E83EFEC /* Res */ = {
 			isa = PBXGroup;
 			children = (
-				BB887477EA7BD45674745F39 /* FloorSelectorView.xib */,
-				BB8870EEAFDF354CB4E36850 /* FloorSelectorView.swift */,
-				BB8879CCE8A199427D1409F0 /* FloorSelectorViewCell */,
+				BB8878FCDB3FDBD14A669F9B /* cube.json */,
+				BB887CFDD164AFA91143E8D6 /* registry.json */,
+				BB88717ACFD91756C7D5F3AD /* technopark.json */,
+			);
+			path = Res;
+			sourceTree = "<group>";
+		};
+		D019488F23E1C7F8001E619F /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				D019489023E1C7F8001E619F /* BuildingNode.swift */,
+				D019489123E1C7F8001E619F /* FloorNode.swift */,
+			);
+			path = Nodes;
+			sourceTree = "<group>";
+		};
+		D019489323E1C7F8001E619F /* FloorSelectorView */ = {
+			isa = PBXGroup;
+			children = (
+				D019489423E1C7F8001E619F /* FloorSelectorViewCell */,
+				D019489723E1C7F8001E619F /* FloorSelectorView.swift */,
+				D019489823E1C7F8001E619F /* FloorSelectorView.xib */,
 			);
 			path = FloorSelectorView;
 			sourceTree = "<group>";
 		};
-		BB8872B32476651040BB2BA3 /* Helpers */ = {
+		D019489423E1C7F8001E619F /* FloorSelectorViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				BB887433743715F463433A68 /* CGRect+Extensions.swift */,
-				BB887F05D3C7A60F1E0AB1F7 /* Array+Extensions.swift */,
-				BB88765276EF6E6747FFD86A /* SCNVector3+Extensions.swift */,
-				BB887FC2F4A1F2FADAB43CD1 /* SCNNode+Extensions.swift */,
-				BB887804DD52D4F7EDD53017 /* XibLoadableView.swift */,
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
-		BB88734934A05CA109CE53E0 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				BB887CA474E5B601906DF2B1 /* Building.swift */,
-				BB88789D3AD0C1C28AA14C47 /* Floor.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		BB887755A74F52CFA69A177A /* TestViewController */ = {
-			isa = PBXGroup;
-			children = (
-				BB8871FAA61B9EA736632788 /* TestViewController.swift */,
-				BB887270EECAD5B4651F25E7 /* TestViewController.xib */,
-			);
-			path = TestViewController;
-			sourceTree = "<group>";
-		};
-		BB8879BFD2FCADFC8AF978C9 /* HologramMapViewController */ = {
-			isa = PBXGroup;
-			children = (
-				BB887A536637D104442084FB /* HologramMapViewController.swift */,
-				BB8873F42621752F01FBA78C /* HologramMapViewController.xib */,
-			);
-			path = HologramMapViewController;
-			sourceTree = "<group>";
-		};
-		BB8879CCE8A199427D1409F0 /* FloorSelectorViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				BB8871574934477353AD0FA7 /* FloorSelectorViewCell.swift */,
-				BB8873802A45EE889D8F5952 /* FloorSelectorViewCell.xib */,
+				D019489523E1C7F8001E619F /* FloorSelectorViewCell.swift */,
+				D019489623E1C7F8001E619F /* FloorSelectorViewCell.xib */,
 			);
 			path = FloorSelectorViewCell;
 			sourceTree = "<group>";
 		};
-		BB887EF75AC464D69F302A68 /* Nodes */ = {
+		D019489B23E1C7F8001E619F /* HologramMapViewController */ = {
 			isa = PBXGroup;
 			children = (
-				BB887F2052A87AE73E79AF6B /* FloorNode.swift */,
-				BB887477E0F7BF93252D68C7 /* BuildingNode.swift */,
+				D019489C23E1C7F8001E619F /* HologramMapViewController.swift */,
+				D019489D23E1C7F8001E619F /* HologramMapViewController.xib */,
 			);
-			path = Nodes;
+			path = HologramMapViewController;
+			sourceTree = "<group>";
+		};
+		D019489F23E1C7F8001E619F /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				D01948A023E1C7F8001E619F /* LaunchScreen.storyboard */,
+				D01948A223E1C7F8001E619F /* Main.storyboard */,
+			);
+			path = Base.lproj;
+			sourceTree = "<group>";
+		};
+		D01948A523E1C7F8001E619F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D01948A623E1C7F8001E619F /* Building.swift */,
+				D01948A723E1C7F8001E619F /* Floor.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D01948A823E1C7F9001E619F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D01948A923E1C7F9001E619F /* Array+Extensions.swift */,
+				D01948AA23E1C7F9001E619F /* SCNVector3+Extensions.swift */,
+				D01948AB23E1C7F9001E619F /* XibLoadableView.swift */,
+				D01948AC23E1C7F9001E619F /* CGRect+Extensions.swift */,
+				D01948AD23E1C7F9001E619F /* SCNNode+Extensions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		D01948B223E1C7F9001E619F /* TestViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D01948B323E1C7F9001E619F /* TestViewController.swift */,
+				D01948B423E1C7F9001E619F /* TestViewController.xib */,
+			);
+			path = TestViewController;
 			sourceTree = "<group>";
 		};
 		D07CEE941FBC550100523ED4 = {
@@ -204,25 +220,26 @@
 		D07CEE9F1FBC550100523ED4 /* ARHologramMap */ = {
 			isa = PBXGroup;
 			children = (
-				D07CEEA01FBC550100523ED4 /* AppDelegate.swift */,
-				BB8873137FE3338726334AA5 /* ARHNode.swift */,
-				BB88771D8EBEBCF115D676A1 /* ARHologram.swift */,
-				D07CEEA91FBC550100523ED4 /* Assets.xcassets */,
-				401A46440B07D2AC97F2955B /* Base.lproj */,
-				BB887530D45899F814520FBD /* GeometryCreator.swift */,
-				BB8879BFD2FCADFC8AF978C9 /* HologramMapViewController */,
-				D07CEEAE1FBC550100523ED4 /* Info.plist */,
-				BB88734934A05CA109CE53E0 /* Models */,
-				BB887EF75AC464D69F302A68 /* Nodes */,
-				D07CEEA41FBC550100523ED4 /* ViewController.swift */,
-				BB8871471655A84D4A83E90E /* FloorSelectorView */,
-				BB887755A74F52CFA69A177A /* TestViewController */,
-				BB8871AFEFC5FA897972D5E2 /* Plane.swift */,
-				BB8870EC1103A64A173C45CE /* Vector2D.swift */,
-				BB8874582055D26B8CAF6E2B /* DataService.swift */,
-				BB8872B32476651040BB2BA3 /* Helpers */,
-				BB88758E62F26DF55B7E4B83 /* BuildingGeometry.swift */,
-				BB88766A773C9005312EF42F /* Typealiases.swift */,
+				D01948B523E1C7F9001E619F /* AppDelegate.swift */,
+				D019489923E1C7F8001E619F /* ARHNode.swift */,
+				D01948A423E1C7F8001E619F /* ARHologram.swift */,
+				D01948B623E1C7F9001E619F /* Assets.xcassets */,
+				D019489F23E1C7F8001E619F /* Base.lproj */,
+				D01948B123E1C7F9001E619F /* BuildingGeometry.swift */,
+				D01948AF23E1C7F9001E619F /* DataService.swift */,
+				D019489323E1C7F8001E619F /* FloorSelectorView */,
+				D019489E23E1C7F8001E619F /* GeometryCreator.swift */,
+				D01948A823E1C7F9001E619F /* Helpers */,
+				D019489B23E1C7F8001E619F /* HologramMapViewController */,
+				D019489223E1C7F8001E619F /* Info.plist */,
+				D01948A523E1C7F8001E619F /* Models */,
+				D019488F23E1C7F8001E619F /* Nodes */,
+				D019488E23E1C7F8001E619F /* Plane.swift */,
+				D01948B223E1C7F9001E619F /* TestViewController */,
+				D01948AE23E1C7F9001E619F /* Typealiases.swift */,
+				D019489A23E1C7F8001E619F /* Vector2D.swift */,
+				D01948B023E1C7F9001E619F /* ViewController.swift */,
+				BB8871D67B40039A0E83EFEC /* Res */,
 			);
 			path = ARHologramMap;
 			sourceTree = "<group>";
@@ -288,13 +305,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D07CEEAA1FBC550100523ED4 /* Assets.xcassets in Resources */,
-				BB88703A1D2F7EA496022FF3 /* HologramMapViewController.xib in Resources */,
-				401A4B060D237CEC384FFB2E /* Main.storyboard in Resources */,
-				401A4C3F3FDC64B548E64B54 /* LaunchScreen.storyboard in Resources */,
-				BB887328711DFDA0A8F4EA7B /* FloorSelectorView.xib in Resources */,
-				BB887D9B7B4F4538454B431D /* TestViewController.xib in Resources */,
-				BB887BCCD23974AB46A57C99 /* FloorSelectorViewCell.xib in Resources */,
+				D01948C523E1C7F9001E619F /* Main.storyboard in Resources */,
+				D01948BE23E1C7F9001E619F /* FloorSelectorView.xib in Resources */,
+				D01948C423E1C7F9001E619F /* LaunchScreen.storyboard in Resources */,
+				D01948C223E1C7F9001E619F /* HologramMapViewController.xib in Resources */,
+				D01948D323E1C7F9001E619F /* TestViewController.xib in Resources */,
+				D01948D523E1C7F9001E619F /* Assets.xcassets in Resources */,
+				D01948BC23E1C7F9001E619F /* FloorSelectorViewCell.xib in Resources */,
+				BB887C767D43D0168396B4BC /* cube.json in Resources */,
+				BB887CCDDFF859DEEABA829F /* registry.json in Resources */,
+				BB8876A6BF3D2A3FFB07AA11 /* technopark.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,47 +350,47 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D07CEEA51FBC550100523ED4 /* ViewController.swift in Sources */,
-				D07CEEA11FBC550100523ED4 /* AppDelegate.swift in Sources */,
-				BB88787414BDEA3EF7481A37 /* ARHologram.swift in Sources */,
-				BB887AE7674CFAAC301F2C44 /* ARHNode.swift in Sources */,
-				BB88770F070C3DFC67AB5840 /* HologramMapViewController.swift in Sources */,
-				BB8870815A6FF64FFF52BD9E /* GeometryCreator.swift in Sources */,
-				BB887E2FA0C281494F450FAD /* Building.swift in Sources */,
-				BB887DEE2E8A1C89461DA67F /* Floor.swift in Sources */,
-				BB8876A3405213DAEA970E4C /* FloorNode.swift in Sources */,
-				BB8870942B11438AE439F724 /* BuildingNode.swift in Sources */,
-				BB887F046F7DC46E0C5D2D68 /* FloorSelectorView.swift in Sources */,
-				BB8877F81DA075DE0173F4EA /* TestViewController.swift in Sources */,
-				BB8870FC1775BA8F339571B5 /* FloorSelectorViewCell.swift in Sources */,
-				BB887DDD60475514E6553123 /* Plane.swift in Sources */,
-				BB8870F542079A2B535A16A5 /* Vector2D.swift in Sources */,
-				BB887FBFA31CD46618F94677 /* DataService.swift in Sources */,
-				BB887AEC063245FBE5E89F31 /* CGRect+Extensions.swift in Sources */,
-				BB887A2134F51934A23A02A2 /* Array+Extensions.swift in Sources */,
-				BB887892BA883C09545C98F4 /* SCNVector3+Extensions.swift in Sources */,
-				BB887E97612602D1C517DD00 /* SCNNode+Extensions.swift in Sources */,
-				BB8872CA5186D02037D04BB9 /* XibLoadableView.swift in Sources */,
-				BB8873AF7CDF79BE8A098734 /* BuildingGeometry.swift in Sources */,
-				BB887E5A9FD01D850B65074E /* Typealiases.swift in Sources */,
+				D01948C823E1C7F9001E619F /* Floor.swift in Sources */,
+				D01948C123E1C7F9001E619F /* HologramMapViewController.swift in Sources */,
+				D01948D223E1C7F9001E619F /* TestViewController.swift in Sources */,
+				D01948C623E1C7F9001E619F /* ARHologram.swift in Sources */,
+				D01948BB23E1C7F9001E619F /* FloorSelectorViewCell.swift in Sources */,
+				D01948C723E1C7F9001E619F /* Building.swift in Sources */,
+				D01948CC23E1C7F9001E619F /* CGRect+Extensions.swift in Sources */,
+				D01948CF23E1C7F9001E619F /* DataService.swift in Sources */,
+				D01948CD23E1C7F9001E619F /* SCNNode+Extensions.swift in Sources */,
+				D01948D123E1C7F9001E619F /* BuildingGeometry.swift in Sources */,
+				D01948B723E1C7F9001E619F /* Plane.swift in Sources */,
+				D01948CB23E1C7F9001E619F /* XibLoadableView.swift in Sources */,
+				D01948D023E1C7F9001E619F /* ViewController.swift in Sources */,
+				D01948C323E1C7F9001E619F /* GeometryCreator.swift in Sources */,
+				D01948BD23E1C7F9001E619F /* FloorSelectorView.swift in Sources */,
+				D01948BF23E1C7F9001E619F /* ARHNode.swift in Sources */,
+				D01948C923E1C7F9001E619F /* Array+Extensions.swift in Sources */,
+				D01948B923E1C7F9001E619F /* FloorNode.swift in Sources */,
+				D01948CE23E1C7F9001E619F /* Typealiases.swift in Sources */,
+				D01948C023E1C7F9001E619F /* Vector2D.swift in Sources */,
+				D01948B823E1C7F9001E619F /* BuildingNode.swift in Sources */,
+				D01948CA23E1C7F9001E619F /* SCNVector3+Extensions.swift in Sources */,
+				D01948D423E1C7F9001E619F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		401A41AFCEF7D1B631D16192 /* LaunchScreen.storyboard */ = {
+		D01948A023E1C7F8001E619F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				401A46DCF114165E12A83724 /* Base */,
+				D01948A123E1C7F8001E619F /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		401A4ABC0BD1A33E1C921787 /* Main.storyboard */ = {
+		D01948A223E1C7F8001E619F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				401A4965788ABEA05F66BD4E /* Base */,
+				D01948A323E1C7F8001E619F /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -494,6 +514,7 @@
 			baseConfigurationReference = 2D424A5000EA729434EC87E0 /* Pods-ARHologramMap.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2T7P8BR7NV;
@@ -503,6 +524,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.djachenko.ARHologramMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -513,6 +535,7 @@
 			baseConfigurationReference = C112113505FB4DC4F141A7A9 /* Pods-ARHologramMap.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2T7P8BR7NV;

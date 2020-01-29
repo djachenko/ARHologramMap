@@ -8,7 +8,7 @@ import Foundation
 
 class DataService {
     static func getJson() -> Data? {
-        guard let path = Bundle.main.path(forResource: "Technopark", ofType: "json") else {
+        guard let path = Bundle.main.path(forResource: "cube", ofType: "json") else {
             return nil
         }
 

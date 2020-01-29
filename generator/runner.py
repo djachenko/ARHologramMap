@@ -1,17 +1,17 @@
 from pathlib import Path
 
 from generators.generator import Generator
+from generators.polyhedron_generator import CubeGenerator
 from generators.technopark_generator import TechnoparkGenerator
 
 import json
 
 
 def main():
-    generator_classes = [
-        TechnoparkGenerator,
+    generators = [
+        TechnoparkGenerator(),
+        CubeGenerator(4, 0.25)
     ]
-
-    generators = [cls() for cls in generator_classes]
 
     jsons = [generator.to_json() for generator in generators]
 
@@ -25,9 +25,9 @@ def main():
     names_list = []
 
     for json_object in jsons:
-        hologram_name = json_object["name"]
+        hologram_name = json_object["name"].lower()
 
-        json_path = results_path / (hologram_name.lower() + ".json")
+        json_path = results_path / (hologram_name + ".json")
 
         with json_path.open("w") as result_file:
             json.dump(json_object, result_file, indent=4)
@@ -42,9 +42,6 @@ def main():
 
     with (results_path / umbrella_file_name).open("w") as registry_file:
         json.dump(registry, registry_file, indent=4)
-
-
-
 
 
 if __name__ == '__main__':

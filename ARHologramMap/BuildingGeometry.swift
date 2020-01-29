@@ -26,7 +26,7 @@ class BuildingGeometry: SCNGeometry {
         let slices = floorNumbers.flatMap { number -> [Polygon3D] in
             let floor = floors[number]!
 
-            let floorHeight = Real(number) * defaultHeight + diff
+            let floorHeight = Real(number - 1) * defaultHeight + diff
 
             if let floorHeight =  floors[number]?.height {
                 diff += floorHeight - defaultHeight
@@ -103,6 +103,23 @@ class BuildingGeometry: SCNGeometry {
             }
 
             return triangles
+        }
+
+        mesh.enumerated().forEach { index, point in
+            print("\(index) (x: \(point.x), y: \(point.y), z: \(point.z))")
+        }
+
+        print()
+
+        meshTriangles.enumerated().forEach { index, triangle in
+            var line = "\(index): "
+
+            triangle.forEach { point in
+                line += "\(point), "
+            }
+
+            print(line)
+            print()
         }
 
         assert(meshTriangles.all { $0.count == 3 })

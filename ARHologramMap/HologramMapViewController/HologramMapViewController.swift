@@ -65,26 +65,13 @@ class HologramMapViewController: UIViewController {
     }
 
     private func startTimer() {
-        print("start timer")
-
-
-
         hitTestTimer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { _ in
             let hitTestResult = self.arSceneView.hitTest(self.arSceneView.frame.center, types: .existingPlaneUsingGeometry)
-
-            print("found \(hitTestResult.count)")
 
             let nearestPlane = hitTestResult.first
             let planeAnchor = nearestPlane?.anchor as? ARPlaneAnchor
 
             self.activePlane = planeAnchor
-
-            if planeAnchor == nil {
-                print("plane not found")
-            }
-            else {
-                print("plane found")
-            }
         }
     }
 
@@ -97,15 +84,17 @@ class HologramMapViewController: UIViewController {
             return
         }
 
-//        let cube = SCNNode.cube(side: 0.25)
+        let cube = SCNNode.cube(side: 0.1)
 
         let data = DataService.getJson()!
 
         let building = try! JSONDecoder().decode(Building.self, from: data)
         let buildingGeometry = BuildingGeometry.build(from: building)
+        buildingGeometry.firstMaterial!.diffuse.contents = UIColor.red
         let buildingNode = SCNNode(geometry: buildingGeometry)
 
         node.addChildNode(buildingNode)
+        node.addChildNode(cube)
 
         stopTimer()
         activePlane = nil
