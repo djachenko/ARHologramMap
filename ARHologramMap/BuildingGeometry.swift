@@ -46,8 +46,8 @@ class BuildingGeometry: SCNGeometry {
         var mesh = [Point3D]()
 
         let meshIndices = slices.map { slice in
-            slice.map { point -> Int in
-                let index = mesh.count
+            slice.map { point -> UInt16 in
+                let index = UInt16(mesh.count)
 
                 mesh.append(point)
 
@@ -55,7 +55,7 @@ class BuildingGeometry: SCNGeometry {
             }
         }
 
-        let meshTriangles = (1..<meshIndices.count).flatMap { topIndex -> [[Int]] in
+        let meshTriangles = (1..<meshIndices.count).flatMap { topIndex -> [[UInt16]] in
             let bottomIndex = topIndex - 1
 
             let topCorners = meshIndices[topIndex]
@@ -69,7 +69,7 @@ class BuildingGeometry: SCNGeometry {
 
             let cornerCount = bottomCorners.count
 
-            var tetragons = (1..<cornerCount).map { index -> [Int] in
+            var tetragons = (1..<cornerCount).map { index -> [UInt16] in
                 [
                     bottomCorners[index],
                     bottomCorners[index - 1],

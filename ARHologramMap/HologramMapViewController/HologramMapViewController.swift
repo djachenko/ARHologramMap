@@ -95,6 +95,7 @@ class HologramMapViewController: UIViewController {
 
         node.addChildNode(buildingNode)
         node.addChildNode(cube)
+        node.addChildNode(SCNNode.axesNode(quiverLength: 0.5, quiverThickness: 0.1))
 
         stopTimer()
         activePlane = nil
