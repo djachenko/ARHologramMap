@@ -130,6 +130,8 @@ class BuildingGeometry: SCNGeometry {
                 elements: [SCNGeometryElement(indices: meshTriangles.flatMap { $0 }, primitiveType: .triangles)]
         )
 
+        buildingGeometry.firstMaterial?.isDoubleSided = true
+
         return buildingGeometry
     }
 }
