@@ -24,7 +24,7 @@ class SceneViewController: UIViewController {
         let cube = SCNNode.cube(side: 0.1)
         cube.geometry?.firstMaterial?.diffuse.contents = UIColor.blue
 
-        let data = DataService.getJson()!
+        let data = DataService.readJson()!
 
         let building = try! JSONDecoder().decode(Building.self, from: data)
         let buildingGeometry = BuildingGeometry.build(from: building)

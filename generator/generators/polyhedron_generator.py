@@ -11,7 +11,7 @@ from models.polygon import Polygon
 def epsilonate(value: float) -> float:
     epsilon = 0.00001
 
-    if value < epsilon:
+    if abs(value) < epsilon:
         return 0
     else:
         return value
@@ -32,6 +32,8 @@ class PolyhedronGenerator(Generator, ABC):
         step = math.pi * 2 / self.angles_count
         floor_height = self.height / self.floors_count
 
+        start_angle = step / 2
+
         floors = {}
 
         for floor_index in range(self.floors_count):
@@ -39,10 +41,10 @@ class PolyhedronGenerator(Generator, ABC):
             points = []
 
             for angle_index in range(self.angles_count):
-                phi = angle_index * step + math.pi / 2
+                phi = angle_index * step + start_angle
 
-                x = epsilonate(math.sin(phi)) * self.radius
-                y = epsilonate(math.cos(phi)) * self.radius
+                x = round(epsilonate(math.sin(phi)) * self.radius, 16)
+                y = round(epsilonate(math.cos(phi)) * self.radius, 16)
 
                 points.append(Point2D(x, y))
 

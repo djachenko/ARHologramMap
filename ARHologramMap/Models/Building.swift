@@ -8,7 +8,7 @@ import Foundation
 
 struct Building {
     let floors: [Int: Floor]
-    let default_height: Real
+    let defaultHeight: Real
 }
 
 extension Building: Decodable {

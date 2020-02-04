@@ -8,7 +8,7 @@ import SceneKit
 
 class BuildingGeometry: SCNGeometry {
     static func build(from building: Building) -> SCNGeometry {
-        assert(building.floors.count >= 2)
+//        assert(building.floors.count >= 2)
 
         func mapTo3D(floor: Polygon2D, height: Real) -> Polygon3D {
             return floor.map { point in
@@ -20,24 +20,24 @@ class BuildingGeometry: SCNGeometry {
         let floorNumbers = floors.keys.sorted()
 
 
-        let defaultHeight = building.default_height
+        let defaultHeight = building.defaultHeight
         var diff = Real(0)
 
         let slices = floorNumbers.flatMap { number -> [Polygon3D] in
             let floor = floors[number]!
 
-            let floorHeight = Real(number - 1) * defaultHeight + diff
+            let floorGroundHeight = Real(number - 1) * defaultHeight + diff
 
-            if let floorHeight =  floors[number]?.height {
-                diff += floorHeight - defaultHeight
-            }
+            let floorHeight = floor.height ?? defaultHeight
+
+            diff += floorHeight - defaultHeight
 
             var floorSlices = [
-                mapTo3D(floor: floor.floor, height: floorHeight)
+                mapTo3D(floor: floor.floor, height: floorGroundHeight)
             ]
 
             if let ceiling = floor.ceiling {
-                floorSlices.append(mapTo3D(floor: ceiling, height: floorHeight))
+                floorSlices.append(mapTo3D(floor: ceiling, height: floorGroundHeight + floorHeight))
             }
 
             return floorSlices

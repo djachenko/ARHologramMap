@@ -8,7 +8,7 @@ import UIKit
 import ARKit
 import SceneKit
 
-class HologramMapViewController: UIViewController {
+class HologramViewController: UIViewController {
     @IBOutlet private weak var arSceneView: ARSCNView!
     @IBOutlet private weak var addHologramButton: UIButton!
 
@@ -22,6 +22,8 @@ class HologramMapViewController: UIViewController {
 
     var hitTestTimer: Timer?
 
+    private var building: Building?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,6 +34,10 @@ class HologramMapViewController: UIViewController {
         arSceneView.autoenablesDefaultLighting = true
 
         arSceneView.scene = SCNScene()
+    }
+
+    func set(model: Building) {
+        building = model
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -80,18 +86,18 @@ class HologramMapViewController: UIViewController {
             fatalError()
         }
 
-        guard let node = arSceneView.node(for: planeAnchor) else {
+        guard let node = arSceneView.node(for: planeAnchor),
+              let building = building else {
             return
         }
 
         let cube = SCNNode.cube(side: 0.1)
 
-        let data = DataService.getJson()!
-
-        let building = try! JSONDecoder().decode(Building.self, from: data)
         let buildingGeometry = BuildingGeometry.build(from: building)
         buildingGeometry.firstMaterial!.diffuse.contents = UIColor.red
+
         let buildingNode = SCNNode(geometry: buildingGeometry)
+        buildingNode.opacity = 0.8
 
         node.addChildNode(buildingNode)
         node.addChildNode(cube)
@@ -102,7 +108,7 @@ class HologramMapViewController: UIViewController {
     }
 }
 
-extension HologramMapViewController: ARSCNViewDelegate {
+extension HologramViewController: ARSCNViewDelegate {
     public func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
         guard let planeAnchor = anchor as? ARPlaneAnchor else {
             return

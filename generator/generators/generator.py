@@ -6,7 +6,7 @@ from models.hologram_entity import HologramEntity
 
 
 class Generator:
-    __MODEL_SIZE = 0.5
+    __MODEL_SIZE = 0.25
 
     @classmethod
     @abstractmethod

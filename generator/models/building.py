@@ -58,7 +58,7 @@ class Building(Scalable):
                 return default
 
             default_height = if_not_nil(self.__default_floor_height, 0)
-            floor_height = if_not_nil(floor.height, 0)
+            floor_height = if_not_nil(floor.height, default_height)
 
             height_diff += floor_height - default_height
 
