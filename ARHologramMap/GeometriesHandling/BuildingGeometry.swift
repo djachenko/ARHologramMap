@@ -8,7 +8,7 @@ import SceneKit
 
 class BuildingGeometry: SCNGeometry {
     static func build(from building: Building) -> SCNGeometry {
-        assert(building.floors.count >= 2)
+//        assert(building.floors.count >= 2)
 
         func mapTo3D(floor: Polygon2D, height: Real) -> Polygon3D {
             return floor.map { point in
@@ -20,24 +20,24 @@ class BuildingGeometry: SCNGeometry {
         let floorNumbers = floors.keys.sorted()
 
 
-        let defaultHeight = building.default_height
+        let defaultHeight = building.defaultHeight
         var diff = Real(0)
 
         let slices = floorNumbers.flatMap { number -> [Polygon3D] in
             let floor = floors[number]!
 
-            let floorHeight = Real(number) * defaultHeight + diff
+            let floorGroundHeight = Real(number - 1) * defaultHeight + diff
 
-            if let floorHeight =  floors[number]?.height {
-                diff += floorHeight - defaultHeight
-            }
+            let floorHeight = floor.height ?? defaultHeight
+
+            diff += floorHeight - defaultHeight
 
             var floorSlices = [
-                mapTo3D(floor: floor.floor, height: floorHeight)
+                mapTo3D(floor: floor.floor, height: floorGroundHeight)
             ]
 
             if let ceiling = floor.ceiling {
-                floorSlices.append(mapTo3D(floor: ceiling, height: floorHeight))
+                floorSlices.append(mapTo3D(floor: ceiling, height: floorGroundHeight + floorHeight))
             }
 
             return floorSlices
@@ -46,8 +46,8 @@ class BuildingGeometry: SCNGeometry {
         var mesh = [Point3D]()
 
         let meshIndices = slices.map { slice in
-            slice.map { point -> Int in
-                let index = mesh.count
+            slice.map { point -> UInt16 in
+                let index = UInt16(mesh.count)
 
                 mesh.append(point)
 
@@ -55,7 +55,7 @@ class BuildingGeometry: SCNGeometry {
             }
         }
 
-        let meshTriangles = (1..<meshIndices.count).flatMap { topIndex -> [[Int]] in
+        let meshTriangles = (1..<meshIndices.count).flatMap { topIndex -> [[UInt16]] in
             let bottomIndex = topIndex - 1
 
             let topCorners = meshIndices[topIndex]
@@ -69,7 +69,7 @@ class BuildingGeometry: SCNGeometry {
 
             let cornerCount = bottomCorners.count
 
-            var tetragons = (1..<cornerCount).map { index -> [Int] in
+            var tetragons = (1..<cornerCount).map { index -> [UInt16] in
                 [
                     bottomCorners[index],
                     bottomCorners[index - 1],
@@ -105,6 +105,23 @@ class BuildingGeometry: SCNGeometry {
             return triangles
         }
 
+        mesh.enumerated().forEach { index, point in
+            print("\(index) (x: \(point.x), y: \(point.y), z: \(point.z))")
+        }
+
+        print()
+
+        meshTriangles.enumerated().forEach { index, triangle in
+            var line = "\(index): "
+
+            triangle.forEach { point in
+                line += "\(point), "
+            }
+
+            print(line)
+            print()
+        }
+
         assert(meshTriangles.all { $0.count == 3 })
 
 
@@ -112,6 +129,8 @@ class BuildingGeometry: SCNGeometry {
                 sources: [SCNGeometrySource(vertices: mesh)],
                 elements: [SCNGeometryElement(indices: meshTriangles.flatMap { $0 }, primitiveType: .triangles)]
         )
+
+        buildingGeometry.firstMaterial?.isDoubleSided = true
 
         return buildingGeometry
     }

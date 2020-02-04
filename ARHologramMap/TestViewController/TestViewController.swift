@@ -13,25 +13,5 @@ class TestViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        selectorView.floorsCount = 7
-
-        let data = DataService.getJson()!
-
-        do {
-            let building = try JSONDecoder().decode(Building.self, from: data)
-
-            let b = building.floors
-
-            let buildingGeometry = BuildingGeometry.build(from: building)
-
-            print(b)
-
-            let a = 7
-        }
-        catch {
-            print(error)
-        }
-
-        let a = 7
     }
 }

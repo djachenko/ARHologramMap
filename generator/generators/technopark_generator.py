@@ -1,11 +1,11 @@
-from typing import List, Tuple
+from collections import defaultdict
 
-import util
-from models.building import Building
-from models.floor import Floor
 from generators.generator import Generator
 from line import Line
-from models.hologram_entity import HologramEntity
+from models.building import Building
+from models.floor import Floor
+from models.point import Point2D
+from models.polygon import Polygon
 
 
 class TechnoparkGenerator(Generator):
@@ -13,58 +13,69 @@ class TechnoparkGenerator(Generator):
     def name(cls) -> str:
         return "Technopark"
 
-    def generate(self) -> HologramEntity:
-        floor_6_dx = 351
-        floor_6_shift = 165
+    def generate(self) -> Building:
+        floor_6_dx = 741
+        floor_6_shift = 320
 
-        floor_13_dx = 246
-        floor_13_shift = 141
+        floor_13_dx = 522
+        floor_13_shift = 271
 
-        passage_dx = 88
-        roof_dx = 390
-
-        floor_6_dx, floor_6_shift, floor_13_dx, floor_13_shift, passage_dx, roof_dx = \
-            util.relation(floor_6_dx, floor_6_shift, floor_13_dx, floor_13_shift, passage_dx, roof_dx)
+        passage_dx = 183
+        roof_dx = 818
 
         floor_6_left = floor_6_dx + floor_6_shift
         floor_13_left = floor_13_dx + floor_13_shift
 
-        outer = Line.from_points((floor_6_left, 6), (floor_13_left, 13))
-        inner = Line.from_points((floor_6_shift, 6), (floor_13_shift, 13))
+        common_floor_dz = 90
+        floor_13_dz = common_floor_dz * 2
 
-        common_floor_dy = 4
-        boiler_dy = common_floor_dy * 2
+        heights = defaultdict(lambda: 1, {
+            13: 2
+        })
 
-        roof_dz_to_dx = 32 / 35
-        roof_dz_to_passage_dz = 16 / 9
+        def ground_heights(index: int) -> float:
+            if index == -1:
+                return 0
 
-        roof_dz = roof_dx / roof_dz_to_dx
-        roof_z_top = roof_dz * roof_dz_to_passage_dz / 2
+            return ground_heights(index - 1) + heights[index]
+
+        outer = Line.from_points(
+            (floor_6_left, ground_heights(6)),
+            (floor_13_left, ground_heights(13))
+        )
+
+        inner = Line.from_points(
+            (floor_6_shift, ground_heights(6)),
+            (floor_13_shift, ground_heights(13))
+        )
+
+        roof_dy_to_dx = 32 / 35
+        roof_dy_to_passage_dy = 16 / 9
+
+        roof_dy = roof_dx / roof_dy_to_dx
+        roof_y_inner = roof_dy * roof_dy_to_passage_dy / 2  # passage_length / 2
 
         bottom_floor = 1
-        top_floor = 12
+        top_floor = 2
 
-        floors = [
-            bottom_floor,
-            top_floor
-        ]
+        floors = list(range(bottom_floor, top_floor + 1))
 
-        floor_height = 4
+        building = Building(floor_height=common_floor_dz)
 
-        building = Building(floor_height=floor_height)
+        def generate_floor(number: int) -> Polygon:
+            ground_height = ground_heights(number - 1)
 
-        def generate_floor(number: int) -> List[Tuple[float, float]]:
-            outer_x = outer.x(number)
-            inner_x = inner.x(number)
+            outer_x = outer.x(ground_height)
+            inner_x = inner.x(ground_height)
 
             points = [
-                (outer_x, roof_z_top),
-                (inner_x, roof_z_top),
-                (inner_x, roof_z_top + roof_dz),
-                (outer_x, roof_z_top + roof_dz),
+                Point2D(outer_x, roof_y_inner),
+                Point2D(inner_x, roof_y_inner),
+                Point2D(inner_x, roof_y_inner + roof_dy),
+                Point2D(outer_x, roof_y_inner + roof_dy),
             ]
 
-            return points
+            return Polygon(points)
 
         for floor in floors:
             floor_points = generate_floor(floor)
@@ -73,22 +84,22 @@ class TechnoparkGenerator(Generator):
 
         building[top_floor].ceil = generate_floor(top_floor + 1)
 
-        def generate_last_floor(index: int) -> List[Tuple[float, int]]:
-            return [
-                (outer.x(index), roof_z_top),
-                (passage_dx, roof_z_top),
-                (passage_dx, 0),
-                (-passage_dx, 0),
-                (-passage_dx, roof_z_top + roof_dz),
-                (outer.x(index), roof_z_top + roof_dz),
-            ]
+        def generate_last_floor(index: int) -> Polygon:
+            return Polygon([
+                Point2D(outer.x(index), roof_y_inner),
+                Point2D(passage_dx / 2, roof_y_inner),
+                Point2D(passage_dx / 2, 0),
+                Point2D(-passage_dx / 2, 0),
+                Point2D(-passage_dx / 2, roof_y_inner + roof_dy),
+                Point2D(outer.x(index), roof_y_inner + roof_dy),
+            ])
 
         last_floor = Floor(
             floor=generate_last_floor(top_floor + 1),
-            ceil=generate_last_floor(top_floor + 2),
-            height=boiler_dy
+            ceil=generate_last_floor(top_floor + 3),
+            height=floor_13_dz
         )
 
-        building[top_floor + 1] = last_floor
+        # building[top_floor + 1] = last_floor
 
         return building
