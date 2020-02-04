@@ -10,6 +10,7 @@ import TableKit
 
 class HologramsListViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var hologramScreenModeSwitch: UISwitch!
 
     private var tableDirector: TableDirector!
 
@@ -17,6 +18,8 @@ class HologramsListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        title = "Models"
 
         tableDirector = TableDirector(tableView: tableView)
 
@@ -41,10 +44,17 @@ class HologramsListViewController: UIViewController {
         presenter.selected(item: item)
     }
 
-    func open(hologram: Building) {
-        let vc = HologramViewController()
+    func open(hologram: Hologram) {
+        let vc: UIViewController & Hologrammable
 
-        vc.set(model: hologram)
+        if hologramScreenModeSwitch.isOn {
+            vc = ARHologramViewController()
+        }
+        else {
+            vc = SceneHologramViewController()
+        }
+
+        vc.set(hologram: hologram)
 
         navigationController?.pushViewController(vc, animated: true)
     }

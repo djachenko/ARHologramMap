@@ -8,7 +8,7 @@ import UIKit
 import ARKit
 import SceneKit
 
-class HologramViewController: UIViewController {
+class ARHologramViewController: UIViewController, Hologrammable {
     @IBOutlet private weak var arSceneView: ARSCNView!
     @IBOutlet private weak var addHologramButton: UIButton!
 
@@ -22,10 +22,16 @@ class HologramViewController: UIViewController {
 
     var hitTestTimer: Timer?
 
-    private var building: Building?
+    private var hologram: Hologram?
+
+    func set(hologram: Building) {
+       self.hologram = hologram
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        title = "AR hologram"
 
         set(buttonEnabled: false)
 
@@ -36,9 +42,6 @@ class HologramViewController: UIViewController {
         arSceneView.scene = SCNScene()
     }
 
-    func set(model: Building) {
-        building = model
-    }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -87,7 +90,7 @@ class HologramViewController: UIViewController {
         }
 
         guard let node = arSceneView.node(for: planeAnchor),
-              let building = building else {
+              let building = hologram else {
             return
         }
 
@@ -108,7 +111,7 @@ class HologramViewController: UIViewController {
     }
 }
 
-extension HologramViewController: ARSCNViewDelegate {
+extension ARHologramViewController: ARSCNViewDelegate {
     public func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
         guard let planeAnchor = anchor as? ARPlaneAnchor else {
             return

@@ -15,3 +15,5 @@ typealias Polygon2D = [Point2D]
 
 typealias Point3D = SCNVector3
 typealias Polygon3D = [Point3D]
+
+typealias Hologram = Building
