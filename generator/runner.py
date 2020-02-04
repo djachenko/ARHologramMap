@@ -8,7 +8,7 @@ from generators.technopark_generator import TechnoparkGenerator
 import json
 
 results_path = Path("results")
-app_path = Path("../ARHologramMap/Res")
+app_path = Path("../app/ARHologramMap/Res")
 
 
 def main():
