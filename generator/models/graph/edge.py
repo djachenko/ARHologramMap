@@ -15,3 +15,6 @@ class Edge:
     @property
     def second(self) -> Vertex:
         return self.__second
+
+    def is_loop(self) -> bool:
+        return self.first == self.second
